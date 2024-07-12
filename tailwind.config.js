@@ -1,6 +1,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 
+
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [
@@ -9,6 +10,8 @@ export default {
         './resources/views/**/*.blade.php',
         './resources/js/**/*.jsx',
     ],
+
+    
 
     theme: {
         extend: {
@@ -19,6 +22,10 @@ export default {
                 'primary': '#F3F4F6',
                 'secondary': '#B7AF94'
             },
+            backgroundImage: {
+                'hero': "url('./public/hero.jpg')"
+            }
+        
         },
     },
 
