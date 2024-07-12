@@ -1,33 +1,162 @@
-import React from "react";
-import { Disclosure, Menu } from "@headlessui/react";
+import React, { useState, useEffect } from "react";
+import { Disclosure, Popover, PopoverButton } from "@headlessui/react";
 import {
     Bars3Icon,
-    BellIcon,
-    ShoppingCartIcon,
-    StarIcon,
-    UserIcon,
     XMarkIcon,
+    ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
-import { Link } from "@inertiajs/react";
+import { Link, usePage, useForm } from "@inertiajs/react";
 
-const navigation = [
-    { name: "Dashboard", href: "#", current: false },
-    { name: "Team", href: "#", current: false },
-    { name: "Projects", href: "#", current: false },
-    { name: "Calendar", href: "#", current: false },
-];
+import { Inertia } from "@inertiajs/inertia";
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
-}
+import Logo from "../../../public/techware-high-resolution-logo-transparent.png";
 
-export default function Navbar(auth) {
+const navigation1 = {
+    categories: [
+        {
+            id: "women",
+            name: "Women",
+            featured: [
+                {
+                    name: "New Arrivals",
+                    href: "#",
+                    imageSrc:
+                        "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
+                    imageAlt:
+                        "Models sitting back to back, wearing Basic Tee in black and bone.",
+                },
+                {
+                    name: "Basic Tees",
+                    href: "#",
+                    imageSrc:
+                        "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
+                    imageAlt:
+                        "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
+                },
+            ],
+            sections: [
+                {
+                    id: "clothing",
+                    name: "Clothing",
+                    items: [
+                        { name: "Tops", href: "#" },
+                        { name: "Dresses", href: "#" },
+                        { name: "Pants", href: "#" },
+                        { name: "Denim", href: "#" },
+                        { name: "Sweaters", href: "#" },
+                        { name: "T-Shirts", href: "#" },
+                        { name: "Jackets", href: "#" },
+                        { name: "Activewear", href: "#" },
+                        { name: "Browse All", href: "#" },
+                    ],
+                },
+                {
+                    id: "accessories",
+                    name: "Accessories",
+                    items: [
+                        { name: "Watches", href: "#" },
+                        { name: "Wallets", href: "#" },
+                        { name: "Bags", href: "#" },
+                        { name: "Sunglasses", href: "#" },
+                        { name: "Hats", href: "#" },
+                        { name: "Belts", href: "#" },
+                    ],
+                },
+                {
+                    id: "brands",
+                    name: "Brands",
+                    items: [
+                        { name: "Full Nelson", href: "#" },
+                        { name: "My Way", href: "#" },
+                        { name: "Re-Arranged", href: "#" },
+                        { name: "Counterfeit", href: "#" },
+                        { name: "Significant Other", href: "#" },
+                    ],
+                },
+            ],
+        },
+        {
+            id: "men",
+            name: "Men",
+            featured: [
+                {
+                    name: "New Arrivals",
+                    href: "#",
+                    imageSrc:
+                        "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
+                    imageAlt:
+                        "Drawstring top with elastic loop closure and textured interior padding.",
+                },
+                {
+                    name: "Artwork Tees",
+                    href: "#",
+                    imageSrc:
+                        "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
+                    imageAlt:
+                        "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
+                },
+            ],
+            sections: [
+                {
+                    id: "clothing",
+                    name: "Clothing",
+                    items: [
+                        { name: "Tops", href: "#" },
+                        { name: "Pants", href: "#" },
+                        { name: "Sweaters", href: "#" },
+                        { name: "T-Shirts", href: "#" },
+                        { name: "Jackets", href: "#" },
+                        { name: "Activewear", href: "#" },
+                        { name: "Browse All", href: "#" },
+                    ],
+                },
+                {
+                    id: "accessories",
+                    name: "Accessories",
+                    items: [
+                        { name: "Watches", href: "#" },
+                        { name: "Wallets", href: "#" },
+                        { name: "Bags", href: "#" },
+                        { name: "Sunglasses", href: "#" },
+                        { name: "Hats", href: "#" },
+                        { name: "Belts", href: "#" },
+                    ],
+                },
+                {
+                    id: "brands",
+                    name: "Brands",
+                    items: [
+                        { name: "Re-Arranged", href: "#" },
+                        { name: "Counterfeit", href: "#" },
+                        { name: "Full Nelson", href: "#" },
+                        { name: "My Way", href: "#" },
+                    ],
+                },
+            ],
+        },
+    ],
+    pages: [
+        { name: "Company", href: "#" },
+        { name: "Contact", href: "/contact" },
+    ],
+};
+
+export default function Navbar() {
+    const { props } = usePage();
+    const { auth } = props;
+
+    const handleSignOut = () => {
+        // Example of how to sign out using Inertia.js
+        
+            Inertia.post(route("logout"));
+        
+    };
     return (
         <>
             <div>
                 <Disclosure as="nav" className="bg-primary">
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                        <div className="relative flex h-16 items-center justify-between">
+                        <div className="relative flex h-30 items-center justify-between">
                             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                                 {/* Mobile menu button*/}
                                 <Disclosure.Button className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
@@ -47,19 +176,19 @@ export default function Navbar(auth) {
                             </div>
                             <div className="flex items-center">
                                 <a
-                                    href="#"
+                                    href="/"
                                     className="text-secondary text-2xl font-black"
                                 >
-                                    TechWare
+                                    <img src={Logo} className="h-12" alt="" />
                                 </a>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
                                 {/* Search Input */}
-                                <div className="mb-3 md:w-96 ml-24 hidden sm:flex">
+                                <div className="mb-3 md:w-96 mr-20 hidden sm:flex">
                                     <div className="relative mb-4 mt-6 flex w-full flex-wrap items-stretch">
                                         <input
                                             type="search"
-                                            className="relative block w-full rounded-full  bg-secondary bg-clip-padding px-3 py-[0.25rem] pl-4 pr-10 text-base font-normal leading-[1.6] text-neutral-700  transition duration-200 ease-in-out focus:z-[3]  focus:text-neutral-700 dark:text-neutral-200 dark:placeholder:text-white "
+                                            className="relative block w-full rounded-full  bg-secondary bg-clip-padding px-3 py-[0.25rem] pl-4 pr-10 text-base font-normal leading-[1.6] text-neutral-700  transition duration-200 ease-in-out focus:z-[3] focus:border-secondary focus:text-neutral-700 dark:text-neutral-200 dark:placeholder:text-white "
                                             placeholder="Search"
                                             aria-label="Search"
                                         />
@@ -80,197 +209,247 @@ export default function Navbar(auth) {
                                     </div>
                                 </div>
                             </div>
-                            <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                                <button
-                                    type="button"
-                                    className="relative rounded-full p-1 text-secondary hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                >
-                                    <span className="absolute -inset-1.5" />
-                                    <span className="sr-only">
-                                        View notifications
-                                    </span>
-                                    <StarIcon
-                                        aria-hidden="true"
-                                        className="h-8 w-8 mr-5"
-                                    />
-                                </button>
-
-                                {/* Profile dropdown */}
-                                <Menu as="div" className="relative">
-                                    <div>
-                                        <Menu.Button className="relative flex rounded-full text-secondary text-sm hover:text-black">
-                                            <span className="absolute -inset-1.5" />
-                                            <span className="sr-only">
-                                                Open user menu
-                                            </span>
-                                            <UserIcon className="h-8 w-8 mr-5" />
-                                        </Menu.Button>
-                                    </div>
-                                    <Menu.Items
-                                        transition
-                                        className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                                    >
-                                        <Menu.Item>
-                                            <a
-                                                href="#"
-                                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                                            >
-                                                Your Profile
-                                            </a>
-                                        </Menu.Item>
-                                        <Menu.Item>
-                                            <a
-                                                href="#"
-                                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                                            >
-                                                Settings
-                                            </a>
-                                        </Menu.Item>
-                                        <Menu.Item>
-                                            <a
-                                                href={route("register")}
-                                                className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                                            >
-                                                Register
-                                            </a>
-                                        </Menu.Item>
-                                        {auth.user ? (
-                                            <Menu.Item>
-                                                <Link
-                                                    href={route("logout")}
-                                                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                                                    method="post"
-                                                    as="button"
-                                                >
-                                                    Sign out
-                                                </Link>
-                                            </Menu.Item>
-                                        ) : (
-                                            <Menu.Item>
-                                                <Link
-                                                    href={route("login")}
-                                                    className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100"
-                                                >
-                                                    Sign in
-                                                </Link>
-                                            </Menu.Item>
-                                        )}
-                                    </Menu.Items>
-                                </Menu>
-                                <button
-                                    type="button"
-                                    className="relative rounded-full text-secondary hover:text-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
-                                >
-                                    <span className="absolute -inset-1.5" />
-                                    <span className="sr-only">
-                                        View notifications
-                                    </span>
-                                    <ShoppingCartIcon
-                                        aria-hidden="true"
-                                        className="h-8 w-8"
-                                    />
-                                </button>
-                            </div>
                         </div>
                     </div>
-
-                    <Disclosure.Panel className="sm:hidden">
-                        <div className="space-y-1 px-2 pb-3 pt-2">
-                            {navigation.map((item) => (
-                                <Disclosure.Button
-                                    key={item.name}
-                                    as="a"
-                                    href={item.href}
-                                    aria-current={
-                                        item.current ? "page" : undefined
-                                    }
-                                    className={classNames(
-                                        item.current
-                                            ? "bg-gray-900 text-white"
-                                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                        "block rounded-md px-3 py-2 text-base font-medium"
-                                    )}
-                                >
-                                    {item.name}
-                                </Disclosure.Button>
-                            ))}
-                        </div>
-                    </Disclosure.Panel>
                 </Disclosure>
             </div>
 
             <div>
-                <Disclosure as="nav" className="bg-secondary hidden sm:flex">
-                    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                        <div className="relative flex h-16 items-center justify-between">
-                            <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                                {/* Mobile menu button*/}
-                                <Disclosure.Button className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                                    <span className="absolute -inset-0.5" />
-                                    <span className="sr-only">
-                                        Open main menu
-                                    </span>
-                                    <Bars3Icon
-                                        aria-hidden="true"
-                                        className="block h-6 w-6 group-data-[open]:hidden"
-                                    />
-                                    <XMarkIcon
-                                        aria-hidden="true"
-                                        className="hidden h-6 w-6 group-data-[open]:block"
-                                    />
-                                </Disclosure.Button>
-                            </div>
-                            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
-                                <div className="hidden sm:ml-6 sm:block">
-                                    <div className="flex space-x-4">
-                                        {navigation.map((item) => (
+                <div className="bg-white">
+                    {/* Mobile menu */}
+
+                    <header className="relative bg-white">
+                        <p className="flex h-10 items-center justify-center bg-secondary px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+                            Get free delivery on orders over $100
+                        </p>
+
+                        <nav
+                            aria-label="Top"
+                            className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
+                        >
+                            <div className="border-b border-gray-200">
+                                <div className="flex h-16 items-center">
+                                    {/* Flyout menus */}
+                                    <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
+                                        <div className="flex h-full space-x-8">
+                                            {navigation1.categories.map(
+                                                (category) => (
+                                                    <Popover
+                                                        key={category.name}
+                                                        className="flex"
+                                                    >
+                                                        <div className="relative flex">
+                                                            <PopoverButton className="relative z-10 -mb-px flex items-center border-b-2 border-transparent pt-px text-sm font-medium text-gray-700 transition-colors duration-200 ease-out hover:text-gray-800 data-[open]:border-indigo-600 data-[open]:text-indigo-600">
+                                                                {category.name}
+                                                            </PopoverButton>
+                                                        </div>
+
+                                                        <Popover.Panel
+                                                            transition
+                                                            className="absolute inset-x-0 top-full text-sm text-gray-500 transition data-[closed]:opacity-0 data-[enter]:duration-200 data-[leave]:duration-150 data-[enter]:ease-out data-[leave]:ease-in"
+                                                        >
+                                                            {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
+                                                            <div
+                                                                aria-hidden="true"
+                                                                className="absolute inset-0 top-1/2 bg-white shadow"
+                                                            />
+                                                            <div className="relative bg-white">
+                                                                <div className="mx-auto max-w-7xl px-8">
+                                                                    <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
+                                                                        <div className="col-start-2 grid grid-cols-2 gap-x-8">
+                                                                            {category.featured.map(
+                                                                                (
+                                                                                    item
+                                                                                ) => (
+                                                                                    <div
+                                                                                        key={
+                                                                                            item.name
+                                                                                        }
+                                                                                        className="group relative text-base sm:text-sm"
+                                                                                    >
+                                                                                        <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                                                                                            <img
+                                                                                                alt={
+                                                                                                    item.imageAlt
+                                                                                                }
+                                                                                                src={
+                                                                                                    item.imageSrc
+                                                                                                }
+                                                                                                className="object-cover object-center"
+                                                                                            />
+                                                                                        </div>
+                                                                                        <a
+                                                                                            href={
+                                                                                                item.href
+                                                                                            }
+                                                                                            className="mt-6 block font-medium text-gray-900"
+                                                                                        >
+                                                                                            <span
+                                                                                                aria-hidden="true"
+                                                                                                className="absolute inset-0 z-10"
+                                                                                            />
+                                                                                            {
+                                                                                                item.name
+                                                                                            }
+                                                                                        </a>
+                                                                                        <p
+                                                                                            aria-hidden="true"
+                                                                                            className="mt-1"
+                                                                                        >
+                                                                                            Shop
+                                                                                            now
+                                                                                        </p>
+                                                                                    </div>
+                                                                                )
+                                                                            )}
+                                                                        </div>
+                                                                        <div className="row-start-1 grid grid-cols-3 gap-x-8 gap-y-10 text-sm">
+                                                                            {category.sections.map(
+                                                                                (
+                                                                                    section
+                                                                                ) => (
+                                                                                    <div
+                                                                                        key={
+                                                                                            section.name
+                                                                                        }
+                                                                                    >
+                                                                                        <p
+                                                                                            id={`${section.name}-heading`}
+                                                                                            className="font-medium text-gray-900"
+                                                                                        >
+                                                                                            {
+                                                                                                section.name
+                                                                                            }
+                                                                                        </p>
+                                                                                        <ul
+                                                                                            role="list"
+                                                                                            aria-labelledby={`${section.name}-heading`}
+                                                                                            className="mt-6 space-y-6 sm:mt-4 sm:space-y-4"
+                                                                                        >
+                                                                                            {section.items.map(
+                                                                                                (
+                                                                                                    item
+                                                                                                ) => (
+                                                                                                    <li
+                                                                                                        key={
+                                                                                                            item.name
+                                                                                                        }
+                                                                                                        className="flex"
+                                                                                                    >
+                                                                                                        <a
+                                                                                                            href={
+                                                                                                                item.href
+                                                                                                            }
+                                                                                                            className="hover:text-gray-800"
+                                                                                                        >
+                                                                                                            {
+                                                                                                                item.name
+                                                                                                            }
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                )
+                                                                                            )}
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                )
+                                                                            )}
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </Popover.Panel>
+                                                    </Popover>
+                                                )
+                                            )}
+
+                                            {navigation1.pages.map((page) => (
+                                                <a
+                                                    key={page.name}
+                                                    href={page.href}
+                                                    className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                                                >
+                                                    {page.name}
+                                                </a>
+                                            ))}
+                                        </div>
+                                    </Popover.Group>
+
+                                    <div className="ml-auto flex items-center">
+                                        <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                                            {auth.user ? (
+                                                <button
+                                                    onClick={handleSignOut}
+                                                    className="text-sm font-medium text-gray-700 hover:text-gray-800 cursor-pointer"
+                                                >
+                                                    Sign out
+                                                </button>
+                                            ) : (
+                                                <>
+                                                    <Link
+                                                        href={route("login")}
+                                                        className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                                                    >
+                                                        Sign in
+                                                    </Link>
+                                                    <span
+                                                        aria-hidden="true"
+                                                        className="h-6 w-px bg-gray-200"
+                                                    />
+                                                    <Link
+                                                        href={route("register")}
+                                                        className="text-sm font-medium text-gray-700 hover:text-gray-800"
+                                                    >
+                                                        Create account
+                                                    </Link>
+                                                </>
+                                            )}
+                                        </div>
+
+                                        <div className="hidden lg:ml-8 lg:flex">
                                             <a
-                                                key={item.name}
-                                                href={item.href}
-                                                aria-current={
-                                                    item.current
-                                                        ? "page"
-                                                        : undefined
-                                                }
-                                                className={classNames(
-                                                    item.current
-                                                        ? "bg-gray-900 text-secondary"
-                                                        : "text-secondary hover:bg-black hover:text-white",
-                                                    "rounded-md px-3 py-2 text-sm font-medium bg-white"
-                                                )}
+                                                href="#"
+                                                className="flex items-center text-gray-700 hover:text-gray-800"
                                             >
-                                                {item.name}
+                                                <img
+                                                    alt=""
+                                                    src="https://tailwindui.com/img/flags/flag-canada.svg"
+                                                    className="block h-auto w-5 flex-shrink-0"
+                                                />
+                                                <span className="ml-3 block text-sm font-medium">
+                                                    CAD
+                                                </span>
+                                                <span className="sr-only">
+                                                    , change currency
+                                                </span>
                                             </a>
-                                        ))}
+                                        </div>
+
+                                        {/* Search */}
+
+                                        {/* Cart */}
+                                        <div className="ml-4 flow-root lg:ml-6">
+                                            <a
+                                                href="#"
+                                                className="group -m-2 flex items-center p-2"
+                                            >
+                                                <ShoppingBagIcon
+                                                    aria-hidden="true"
+                                                    className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                                                />
+                                                <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">
+                                                    0
+                                                </span>
+                                                <span className="sr-only">
+                                                    items in cart, view bag
+                                                </span>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <Disclosure.Panel className="sm:hidden">
-                        <div className="space-y-1 px-2 pb-3 pt-2">
-                            {navigation.map((item) => (
-                                <Disclosure.Button
-                                    key={item.name}
-                                    as="a"
-                                    href={item.href}
-                                    aria-current={
-                                        item.current ? "page" : undefined
-                                    }
-                                    className={classNames(
-                                        item.current
-                                            ? "bg-gray-900 text-white"
-                                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                                        "block rounded-md px-3 py-2 text-base font-medium"
-                                    )}
-                                >
-                                    {item.name}
-                                </Disclosure.Button>
-                            ))}
-                        </div>
-                    </Disclosure.Panel>
-                </Disclosure>
+                        </nav>
+                    </header>
+                </div>
             </div>
         </>
     );
