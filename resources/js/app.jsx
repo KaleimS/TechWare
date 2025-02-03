@@ -1,5 +1,8 @@
 import './bootstrap';
 import '../css/app.css';
+import 'flowbite';
+import 'flowbite/dist/flowbite.min.css';
+import 'flowbite/dist/flowbite.js';
 
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';

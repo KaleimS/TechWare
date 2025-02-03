@@ -179,7 +179,7 @@ export default function Navbar() {
                                     href="/"
                                     className="text-secondary text-2xl font-black"
                                 >
-                                    <img src={Logo} className="h-12" alt="" />
+                                    <img src={Logo} className="h-8" alt="" />
                                 </a>
                             </div>
                             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">

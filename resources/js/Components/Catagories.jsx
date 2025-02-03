@@ -1,55 +1,71 @@
-import React, { useState } from 'react'
+import React, { useEffect } from "react";
+import CatagoriesPic from "../../../public/desk-supplies-composition-high-angle.jpg";
 
 export default function Catagories() {
-  return (
-    <div className='container-fluid'>
-        <div className="pb-16 bg-primary">
-            <div className="flex justify-center items-center">
-                <div className="2xl:mx-auto 2xl:container py-12 px-4 sm:px-6 xl:px-20 2xl:px-0 w-full">
-                    <div className="flex flex-col jusitfy-center items-center space-y-10">
-                        <div className="flex flex-col justify-center items-center space-y-2">
-                            <h1 className="text-3xl xl:text-4xl font-semibold leading-7 xl:leading-9 text-gray-800">Shop By Category</h1>
-                        </div>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-x-4 md:gap-x-8 w-full">
-                            <a href='#' className="relative group flex justify-center items-center h-full w-full bg-secondary p-1">
-                                <img className="object-center object-cover h-full w-full" src="https://i.ibb.co/ThPFmzv/omid-armin-m-VSb6-PFk-VXw-unsplash-1-1.png" alt="girl-image" />
-                                <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">Women</button>
-                                <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50" />
-                            </a>
-                            <a href='#' className="flex flex-col space-y-4 md:space-y-8 mt-4 md:mt-0">
-                                <div className="relative group flex justify-center items-center h-full w-full bg-secondary p-1">
-                                    <img className="object-center object-cover h-full w-full" src="https://i.ibb.co/SXZvYHs/irene-kredenets-DDqx-X0-7v-KE-unsplash-1.png" alt="shoe-image" />
-                                    <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">Shoes</button>
-                                    <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50" />
-                                </div>
-                                <div className="relative group flex justify-center items-center h-full w-full bg-secondary p-1">
-                                    <img className="object-center object-cover h-full w-full" src="https://i.ibb.co/Hd1pVxW/louis-mornaud-Ju-6-TPKXd-Bs-unsplash-1-2.png" alt="watch-image" />
-                                    <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">Watches</button>
-                                    <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50" />
-                                </div>
-                            </a>
-                            <a href='#' className="relative group justify-center items-center h-full w-full hidden lg:flex bg-secondary p-1">
-                                <img className="object-center object-cover h-full w-full" src="https://i.ibb.co/PTtRBLL/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-1.png" alt="girl-image" />
-                                <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">Women</button>
-                                <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50" />
-                            </a>
-                            <a href='#' className="relative group flex justify-center items-center h-full w-full mt-4 md:hidden md:mt-8 lg:hidden">
-                                <img className="object-center object-cover h-full w-full hidden md:block" src="https://i.ibb.co/6FjW19n/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-2.png" alt="girl-image" />
-                                <img className="object-center object-cover h-full w-full md:hidden" src="https://i.ibb.co/sQgHwHn/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-1.png" alt="olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-2" />
-                                <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">Women</button>
-                                <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50" />
-                            </a>
-                        </div>
-                        <a href='#' className="relative group hidden md:flex justify-center items-center h-full w-full mt-4 md:mt-8 lg:hidden bg-secondary p-1">
-                            <img className="object-center object-cover h-full w-full hidden md:block" src="https://i.ibb.co/6FjW19n/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-2.png" alt="girl-image" />
-                            <img className="object-center object-cover h-full w-full sm:hidden" src="https://i.ibb.co/sQgHwHn/olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-1.png" alt="olive-tatiane-Im-Ez-F9-B91-Mk-unsplash-2" />
-                            <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 bottom-4 z-10 absolute text-base font-medium leading-none text-gray-800 py-3 w-36 bg-white">Women</button>
-                            <div className="absolute opacity-0 group-hover:opacity-100 transition duration-500 bottom-3 py-6 z-0 px-20 w-36 bg-white bg-opacity-50" />
-                        </a>
-                    </div>
-                </div>
+    
+    useEffect(() => {
+        if (window.paddle) {
+            Paddle.Setup({ vendor: a87b709ece781724921c8150bc1ab062d35d714faebe9fc9eb })
+        }
+    }, []);
+
+    let itemsList = [
+        {
+            priceId: "pri_01gsz8ntc6z7npqqp6j4ys0w1w",
+            quantity: 5,
+        },
+        {
+            priceId: "pri_01h1vjfevh5etwq3rb416a23h2",
+            quantity: 1,
+        },
+    ];
+
+    let customerInfo = {
+        email: "sam@example.com",
+        address: {
+            countryCode: "US",
+            postalCode: "10021",
+        },
+    };
+
+    const openCheckout = (items, customer) => {
+        if (window.Paddle) {
+            Paddle.Checkout.open({
+                items: items,
+                customer: customer,
+            });
+        } else {
+            console.error("Paddle is not loaded.");
+        }
+    };
+
+    return (
+        <div className="w-full h-[100vh] relative">
+            <img
+                src={CatagoriesPic}
+                alt="d"
+                className="w-full h-full object-cover object-top"
+            />
+            <div>
+                <h3>
+                    <code>Paddle.checkout.open()</code>
+                </h3>
+                <a
+                    href="#"
+                    className="bg-secondary hover:bg-white hover:text-black text-white font-bold py-5 px-12 absolute top-20 left-20 rounded-full cursor-pointer"
+                    onClick={() => openCheckout(itemsList, customerInfo)}
+                >
+                    Sign up now!
+                </a>
+            </div>
+
+            <div className="absolute top-44 left-20 text-white text-3xl font-bold">
+                Upgrade Your Workspace Today !
+            </div>
+            <div className="absolute top-60 left-20 text-white text-xl">
+                Techware brings you an endless selection <br></br> of Office
+                Supplies
             </div>
         </div>
-    </div>
-  )
+    );
 }
