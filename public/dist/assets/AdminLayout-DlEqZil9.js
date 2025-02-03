@@ -1,0 +1,1 @@
+import{j as r}from"./app-Bl-6BY5V.js";import e from"./AdminNavbar-dMW4HpBf.js";import i from"./SidebarComp-C0oxlLFS.js";function x({children:s}){return r.jsxs("div",{className:"flex flex-col min-h-screen bg-primary",children:[r.jsx(e,{}),r.jsxs("div",{className:"flex flex-grow",children:[r.jsx(i,{}),r.jsx("div",{className:"flex-grow p-4",children:s})]})]})}export{x as A};

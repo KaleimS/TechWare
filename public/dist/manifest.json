@@ -1,0 +1,497 @@
+{
+  "_AdminLayout-DlEqZil9.js": {
+    "file": "assets/AdminLayout-DlEqZil9.js",
+    "name": "AdminLayout",
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/Pages/Admin/AdminNavbar.jsx",
+      "resources/js/Pages/Admin/SidebarComp.jsx"
+    ]
+  },
+  "_AuthenticatedLayout-WpbequYa.js": {
+    "file": "assets/AuthenticatedLayout-WpbequYa.js",
+    "name": "AuthenticatedLayout",
+    "imports": [
+      "resources/js/app.jsx",
+      "_transition-C1ELm654.js"
+    ]
+  },
+  "_GuestLayout-4CLr25pd.js": {
+    "file": "assets/GuestLayout-4CLr25pd.js",
+    "name": "GuestLayout",
+    "imports": [
+      "resources/js/app.jsx",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_use-tab-direction-D8usIk_B.js",
+      "_portal-RX39kU-m.js"
+    ]
+  },
+  "_InputLabel-DtJ6dJ4J.js": {
+    "file": "assets/InputLabel-DtJ6dJ4J.js",
+    "name": "InputLabel",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_PrimaryButton-kMaGrHPK.js": {
+    "file": "assets/PrimaryButton-kMaGrHPK.js",
+    "name": "PrimaryButton",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_TextInput-BOT8b4A9.js": {
+    "file": "assets/TextInput-BOT8b4A9.js",
+    "name": "TextInput",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_description-Dq3vSIfQ.js": {
+    "file": "assets/description-Dq3vSIfQ.js",
+    "name": "description",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-server-handoff-complete-XTwbPjHI.js"
+    ]
+  },
+  "_floating-ui.react-dom-CY5KcL8_.js": {
+    "file": "assets/floating-ui.react-dom-CY5KcL8_.js",
+    "name": "floating-ui.react-dom",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_form-fields-N4bCsQXE.js": {
+    "file": "assets/form-fields-N4bCsQXE.js",
+    "name": "form-fields",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_use-tab-direction-D8usIk_B.js"
+    ]
+  },
+  "_index.esm-DNPBiPWX.js": {
+    "file": "assets/index.esm-DNPBiPWX.js",
+    "name": "index.esm"
+  },
+  "_label-DZOnRJwS.js": {
+    "file": "assets/label-DZOnRJwS.js",
+    "name": "label",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_description-Dq3vSIfQ.js"
+    ]
+  },
+  "_portal-RX39kU-m.js": {
+    "file": "assets/portal-RX39kU-m.js",
+    "name": "portal",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-server-handoff-complete-XTwbPjHI.js"
+    ]
+  },
+  "_techware-high-resolution-logo-transparent-D6FIOWKc.js": {
+    "file": "assets/techware-high-resolution-logo-transparent-D6FIOWKc.js",
+    "name": "techware-high-resolution-logo-transparent",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_portal-RX39kU-m.js"
+    ],
+    "assets": [
+      "assets/techware-high-resolution-logo-transparent-C9LPR9fQ.png"
+    ]
+  },
+  "_transition-C1ELm654.js": {
+    "file": "assets/transition-C1ELm654.js",
+    "name": "transition",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-server-handoff-complete-XTwbPjHI.js"
+    ]
+  },
+  "_use-inert-others-DFadJEqF.js": {
+    "file": "assets/use-inert-others-DFadJEqF.js",
+    "name": "use-inert-others",
+    "imports": [
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_portal-RX39kU-m.js"
+    ]
+  },
+  "_use-server-handoff-complete-XTwbPjHI.js": {
+    "file": "assets/use-server-handoff-complete-XTwbPjHI.js",
+    "name": "use-server-handoff-complete",
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "_use-tab-direction-D8usIk_B.js": {
+    "file": "assets/use-tab-direction-D8usIk_B.js",
+    "name": "use-tab-direction",
+    "imports": [
+      "resources/js/app.jsx",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_portal-RX39kU-m.js"
+    ]
+  },
+  "public/desk-supplies-composition-high-angle.jpg": {
+    "file": "assets/desk-supplies-composition-high-angle-Bz7P9u5L.jpg",
+    "src": "public/desk-supplies-composition-high-angle.jpg"
+  },
+  "public/hero.jpg": {
+    "file": "assets/hero-_ekwImzu.jpg",
+    "src": "public/hero.jpg"
+  },
+  "public/techware-high-resolution-logo-transparent.png": {
+    "file": "assets/techware-high-resolution-logo-transparent-C9LPR9fQ.png",
+    "src": "public/techware-high-resolution-logo-transparent.png"
+  },
+  "resources/js/Pages/Admin/AdminNavbar.jsx": {
+    "file": "assets/AdminNavbar-dMW4HpBf.js",
+    "name": "AdminNavbar",
+    "src": "resources/js/Pages/Admin/AdminNavbar.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_use-inert-others-DFadJEqF.js",
+      "_portal-RX39kU-m.js",
+      "_description-Dq3vSIfQ.js",
+      "_label-DZOnRJwS.js",
+      "_floating-ui.react-dom-CY5KcL8_.js"
+    ]
+  },
+  "resources/js/Pages/Admin/Auth/Login.jsx": {
+    "file": "assets/Login-fwdoBDvT.js",
+    "name": "Login",
+    "src": "resources/js/Pages/Admin/Auth/Login.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-4CLr25pd.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_portal-RX39kU-m.js",
+      "_use-tab-direction-D8usIk_B.js"
+    ]
+  },
+  "resources/js/Pages/Admin/Dashboard.jsx": {
+    "file": "assets/Dashboard-D656pPIl.js",
+    "name": "Dashboard",
+    "src": "resources/js/Pages/Admin/Dashboard.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "resources/js/Pages/Admin/SidebarComp.jsx",
+      "_AdminLayout-DlEqZil9.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_index.esm-DNPBiPWX.js",
+      "resources/js/Pages/Admin/AdminNavbar.jsx",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_portal-RX39kU-m.js",
+      "_use-inert-others-DFadJEqF.js",
+      "_description-Dq3vSIfQ.js",
+      "_label-DZOnRJwS.js"
+    ]
+  },
+  "resources/js/Pages/Admin/Product/Index.jsx": {
+    "file": "assets/Index-B5g0DE43.js",
+    "name": "Index",
+    "src": "resources/js/Pages/Admin/Product/Index.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_AdminLayout-DlEqZil9.js",
+      "resources/js/Pages/Admin/Product/ProductList.jsx",
+      "resources/js/Pages/Admin/AdminNavbar.jsx",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_portal-RX39kU-m.js",
+      "_use-inert-others-DFadJEqF.js",
+      "_description-Dq3vSIfQ.js",
+      "_label-DZOnRJwS.js",
+      "resources/js/Pages/Admin/SidebarComp.jsx",
+      "_index.esm-DNPBiPWX.js"
+    ]
+  },
+  "resources/js/Pages/Admin/Product/ProductList.jsx": {
+    "file": "assets/ProductList-Bp9YA6VO.js",
+    "name": "ProductList",
+    "src": "resources/js/Pages/Admin/Product/ProductList.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx"
+    ]
+  },
+  "resources/js/Pages/Admin/SidebarComp.jsx": {
+    "file": "assets/SidebarComp-C0oxlLFS.js",
+    "name": "SidebarComp",
+    "src": "resources/js/Pages/Admin/SidebarComp.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_index.esm-DNPBiPWX.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ConfirmPassword.jsx": {
+    "file": "assets/ConfirmPassword-KbZjX7tu.js",
+    "name": "ConfirmPassword",
+    "src": "resources/js/Pages/Auth/ConfirmPassword.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-4CLr25pd.js",
+      "_TextInput-BOT8b4A9.js",
+      "_InputLabel-DtJ6dJ4J.js",
+      "_PrimaryButton-kMaGrHPK.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_portal-RX39kU-m.js",
+      "_use-tab-direction-D8usIk_B.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ForgotPassword.jsx": {
+    "file": "assets/ForgotPassword-BIb3H2yG.js",
+    "name": "ForgotPassword",
+    "src": "resources/js/Pages/Auth/ForgotPassword.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-4CLr25pd.js",
+      "_TextInput-BOT8b4A9.js",
+      "_PrimaryButton-kMaGrHPK.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_portal-RX39kU-m.js",
+      "_use-tab-direction-D8usIk_B.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Login.jsx": {
+    "file": "assets/Login-BmmOBGh3.js",
+    "name": "Login",
+    "src": "resources/js/Pages/Auth/Login.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-4CLr25pd.js",
+      "_TextInput-BOT8b4A9.js",
+      "_PrimaryButton-kMaGrHPK.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_use-tab-direction-D8usIk_B.js",
+      "_portal-RX39kU-m.js",
+      "_floating-ui.react-dom-CY5KcL8_.js"
+    ]
+  },
+  "resources/js/Pages/Auth/Register.jsx": {
+    "file": "assets/Register-WuoNvN9_.js",
+    "name": "Register",
+    "src": "resources/js/Pages/Auth/Register.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-4CLr25pd.js",
+      "_TextInput-BOT8b4A9.js",
+      "_InputLabel-DtJ6dJ4J.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_use-tab-direction-D8usIk_B.js",
+      "_portal-RX39kU-m.js",
+      "_floating-ui.react-dom-CY5KcL8_.js"
+    ]
+  },
+  "resources/js/Pages/Auth/ResetPassword.jsx": {
+    "file": "assets/ResetPassword-BYg1W49o.js",
+    "name": "ResetPassword",
+    "src": "resources/js/Pages/Auth/ResetPassword.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-4CLr25pd.js",
+      "_TextInput-BOT8b4A9.js",
+      "_InputLabel-DtJ6dJ4J.js",
+      "_PrimaryButton-kMaGrHPK.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_portal-RX39kU-m.js",
+      "_use-tab-direction-D8usIk_B.js"
+    ]
+  },
+  "resources/js/Pages/Auth/VerifyEmail.jsx": {
+    "file": "assets/VerifyEmail-DNJSSz3-.js",
+    "name": "VerifyEmail",
+    "src": "resources/js/Pages/Auth/VerifyEmail.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-4CLr25pd.js",
+      "_PrimaryButton-kMaGrHPK.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_portal-RX39kU-m.js",
+      "_use-tab-direction-D8usIk_B.js"
+    ]
+  },
+  "resources/js/Pages/Contact.jsx": {
+    "file": "assets/Contact-B1ffWuvr.js",
+    "name": "Contact",
+    "src": "resources/js/Pages/Contact.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_description-Dq3vSIfQ.js",
+      "_form-fields-N4bCsQXE.js",
+      "_label-DZOnRJwS.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_portal-RX39kU-m.js",
+      "_GuestLayout-4CLr25pd.js",
+      "_use-tab-direction-D8usIk_B.js",
+      "_floating-ui.react-dom-CY5KcL8_.js"
+    ]
+  },
+  "resources/js/Pages/Dashboard.jsx": {
+    "file": "assets/Dashboard-CyEHAeO9.js",
+    "name": "Dashboard",
+    "src": "resources/js/Pages/Dashboard.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-WpbequYa.js",
+      "_transition-C1ELm654.js",
+      "_use-server-handoff-complete-XTwbPjHI.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Edit.jsx": {
+    "file": "assets/Edit-DawuRA-_.js",
+    "name": "Edit",
+    "src": "resources/js/Pages/Profile/Edit.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_AuthenticatedLayout-WpbequYa.js",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
+      "_transition-C1ELm654.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_TextInput-BOT8b4A9.js",
+      "_InputLabel-DtJ6dJ4J.js",
+      "_portal-RX39kU-m.js",
+      "_use-tab-direction-D8usIk_B.js",
+      "_use-inert-others-DFadJEqF.js",
+      "_form-fields-N4bCsQXE.js",
+      "_description-Dq3vSIfQ.js",
+      "_PrimaryButton-kMaGrHPK.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx": {
+    "file": "assets/DeleteUserForm-BeB7_MSq.js",
+    "name": "DeleteUserForm",
+    "src": "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_TextInput-BOT8b4A9.js",
+      "_InputLabel-DtJ6dJ4J.js",
+      "_portal-RX39kU-m.js",
+      "_use-tab-direction-D8usIk_B.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_use-inert-others-DFadJEqF.js",
+      "_form-fields-N4bCsQXE.js",
+      "_description-Dq3vSIfQ.js",
+      "_transition-C1ELm654.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx": {
+    "file": "assets/UpdatePasswordForm-0qliUIy6.js",
+    "name": "UpdatePasswordForm",
+    "src": "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_TextInput-BOT8b4A9.js",
+      "_InputLabel-DtJ6dJ4J.js",
+      "_PrimaryButton-kMaGrHPK.js",
+      "_transition-C1ELm654.js",
+      "_use-server-handoff-complete-XTwbPjHI.js"
+    ]
+  },
+  "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx": {
+    "file": "assets/UpdateProfileInformationForm-CyKvcOP3.js",
+    "name": "UpdateProfileInformationForm",
+    "src": "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_TextInput-BOT8b4A9.js",
+      "_InputLabel-DtJ6dJ4J.js",
+      "_PrimaryButton-kMaGrHPK.js",
+      "_transition-C1ELm654.js",
+      "_use-server-handoff-complete-XTwbPjHI.js"
+    ]
+  },
+  "resources/js/Pages/Welcome.jsx": {
+    "file": "assets/Welcome-D6Y_gnsU.js",
+    "name": "Welcome",
+    "src": "resources/js/Pages/Welcome.jsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.jsx",
+      "_GuestLayout-4CLr25pd.js",
+      "_index.esm-DNPBiPWX.js",
+      "_floating-ui.react-dom-CY5KcL8_.js",
+      "_techware-high-resolution-logo-transparent-D6FIOWKc.js",
+      "_use-server-handoff-complete-XTwbPjHI.js",
+      "_portal-RX39kU-m.js",
+      "_use-tab-direction-D8usIk_B.js"
+    ],
+    "assets": [
+      "assets/hero-_ekwImzu.jpg",
+      "assets/desk-supplies-composition-high-angle-Bz7P9u5L.jpg"
+    ]
+  },
+  "resources/js/app.jsx": {
+    "file": "assets/app-Bl-6BY5V.js",
+    "name": "app",
+    "src": "resources/js/app.jsx",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/js/Pages/Admin/AdminNavbar.jsx",
+      "resources/js/Pages/Admin/Auth/Login.jsx",
+      "resources/js/Pages/Admin/Dashboard.jsx",
+      "resources/js/Pages/Admin/Product/Index.jsx",
+      "resources/js/Pages/Admin/Product/ProductList.jsx",
+      "resources/js/Pages/Admin/SidebarComp.jsx",
+      "resources/js/Pages/Auth/ConfirmPassword.jsx",
+      "resources/js/Pages/Auth/ForgotPassword.jsx",
+      "resources/js/Pages/Auth/Login.jsx",
+      "resources/js/Pages/Auth/Register.jsx",
+      "resources/js/Pages/Auth/ResetPassword.jsx",
+      "resources/js/Pages/Auth/VerifyEmail.jsx",
+      "resources/js/Pages/Contact.jsx",
+      "resources/js/Pages/Dashboard.jsx",
+      "resources/js/Pages/Profile/Edit.jsx",
+      "resources/js/Pages/Profile/Partials/DeleteUserForm.jsx",
+      "resources/js/Pages/Profile/Partials/UpdatePasswordForm.jsx",
+      "resources/js/Pages/Profile/Partials/UpdateProfileInformationForm.jsx",
+      "resources/js/Pages/Welcome.jsx"
+    ],
+    "css": [
+      "assets/app-_jFtBrcG.css"
+    ]
+  }
+}
