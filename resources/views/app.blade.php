@@ -15,6 +15,13 @@
         <!-- Scripts -->
         @routes
         @viteReactRefresh
+        <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+        <script type="text/javascript">
+            Paddle.Environment.set("sandbox");
+            Paddle.Initialize({ C
+              token: "test_cd1d6988724dfad9f64f84482f8" // replace with a client-side token
+            });
+          </script>
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
     </head>
