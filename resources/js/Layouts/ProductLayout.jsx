@@ -1,6 +1,7 @@
+
 import Navbar from "@/Components/Navbar";
 
-export default function Guest({ children }) {
+export default function ProductLayout({ children }) {
     return (
         <div className="w-full">
             <Navbar />

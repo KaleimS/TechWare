@@ -6,6 +6,7 @@ import {
     ShoppingBagIcon,
 } from "@heroicons/react/24/solid";
 import { Link, usePage, useForm } from "@inertiajs/react";
+import { initializePaddle } from "@paddle/paddle-js";
 
 import { Inertia } from "@inertiajs/inertia";
 
@@ -14,122 +15,110 @@ import Logo from "../../../public/techware-high-resolution-logo-transparent.png"
 const navigation1 = {
     categories: [
         {
-            id: "women",
-            name: "Women",
+            id: "office",
+            name: "Office Furniture",
             featured: [
                 {
                     name: "New Arrivals",
                     href: "#",
                     imageSrc:
-                        "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
+                        "https://img.freepik.com/free-photo/office-chair_1203-2396.jpg?uid=R185078485&ga=GA1.1.836261793.1738163280&semt=ais_hybrid",
                     imageAlt:
                         "Models sitting back to back, wearing Basic Tee in black and bone.",
                 },
                 {
-                    name: "Basic Tees",
+                    name: "Desks",
                     href: "#",
                     imageSrc:
-                        "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
+                        "https://img.freepik.com/free-photo/minimalist-desk-arrangement-with-laptop-top-view_23-2149073044.jpg?uid=R185078485&ga=GA1.1.836261793.1738163280&semt=ais_hybrid",
                     imageAlt:
                         "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
                 },
             ],
             sections: [
                 {
-                    id: "clothing",
-                    name: "Clothing",
+                    id: "chairs",
+                    name: "Chairs",
                     items: [
-                        { name: "Tops", href: "#" },
-                        { name: "Dresses", href: "#" },
-                        { name: "Pants", href: "#" },
-                        { name: "Denim", href: "#" },
-                        { name: "Sweaters", href: "#" },
-                        { name: "T-Shirts", href: "#" },
-                        { name: "Jackets", href: "#" },
-                        { name: "Activewear", href: "#" },
+                        { name: "Executive Chairs", href: "#" },
+                        { name: "Office Chairs", href: "#" },
+                        { name: "Ergonomic Office Chairs", href: "#" },
+                        { name: "Ergonomic Stools", href: "#" },
+                        { name: "Gaming Chairs", href: "#" },
                         { name: "Browse All", href: "#" },
+                    ],
+                },
+                {
+                    id: "desk",
+                    name: "Desks",
+                    items: [
+                        { name: "Executive Desks", href: "#" },
+                        { name: "Standing Desks", href: "#" },
+                        { name: "L-Shaped Desks", href: "#" },
+                        { name: "Gaming Desk", href: "#" },
+                        { name: "Writing Desk", href: "#" },
                     ],
                 },
                 {
                     id: "accessories",
                     name: "Accessories",
                     items: [
-                        { name: "Watches", href: "#" },
-                        { name: "Wallets", href: "#" },
-                        { name: "Bags", href: "#" },
-                        { name: "Sunglasses", href: "#" },
-                        { name: "Hats", href: "#" },
-                        { name: "Belts", href: "#" },
-                    ],
-                },
-                {
-                    id: "brands",
-                    name: "Brands",
-                    items: [
-                        { name: "Full Nelson", href: "#" },
-                        { name: "My Way", href: "#" },
-                        { name: "Re-Arranged", href: "#" },
-                        { name: "Counterfeit", href: "#" },
-                        { name: "Significant Other", href: "#" },
+                        { name: "Footrests", href: "#" },
+                        { name: "Chair Mats", href: "#" },
+                        { name: "Whiteboards", href: "#" },
+                        { name: "Recyclable Paper", href: "#" },
                     ],
                 },
             ],
         },
         {
-            id: "men",
-            name: "Men",
+            id: "gaming",
+            name: "Gaming",
             featured: [
                 {
                     name: "New Arrivals",
                     href: "#",
                     imageSrc:
-                        "https://tailwindui.com/img/ecommerce-images/product-page-04-detail-product-shot-01.jpg",
+                        "https://img.freepik.com/free-photo/headphones-displayed-against-dark-background_157027-4466.jpg?uid=R185078485&ga=GA1.1.836261793.1738163280&semt=ais_hybrid",
                     imageAlt:
                         "Drawstring top with elastic loop closure and textured interior padding.",
                 },
                 {
-                    name: "Artwork Tees",
+                    name: "Gaming Chairs",
                     href: "#",
                     imageSrc:
-                        "https://tailwindui.com/img/ecommerce-images/category-page-02-image-card-06.jpg",
+                        "https://img.freepik.com/free-photo/still-life-seat-gamers_23-2149746568.jpg?uid=R185078485&ga=GA1.1.836261793.1738163280&semt=ais_hybrid",
                     imageAlt:
                         "Three shirts in gray, white, and blue arranged on table with same line drawing of hands and shapes overlapping on front of shirt.",
                 },
             ],
             sections: [
                 {
-                    id: "clothing",
-                    name: "Clothing",
+                    id: "gamingFurniture",
+                    name: "Gaming Furniture",
                     items: [
-                        { name: "Tops", href: "#" },
-                        { name: "Pants", href: "#" },
-                        { name: "Sweaters", href: "#" },
-                        { name: "T-Shirts", href: "#" },
-                        { name: "Jackets", href: "#" },
-                        { name: "Activewear", href: "#" },
-                        { name: "Browse All", href: "#" },
+                        { name: "Gaming Chairs", href: "#" },
+                        { name: "Gaming Desk", href: "#" },
                     ],
                 },
                 {
                     id: "accessories",
                     name: "Accessories",
                     items: [
-                        { name: "Watches", href: "#" },
-                        { name: "Wallets", href: "#" },
-                        { name: "Bags", href: "#" },
-                        { name: "Sunglasses", href: "#" },
-                        { name: "Hats", href: "#" },
-                        { name: "Belts", href: "#" },
+                        { name: "Cable Managemnet", href: "#" },
+                        { name: "Lamps", href: "#" },
+                        { name: "Headset Holders", href: "#" },
+                        { name: "Mouse Mats", href: "#" },
+                        { name: "LED Lights", href: "#" },
                     ],
                 },
                 {
-                    id: "brands",
-                    name: "Brands",
+                    id: "miceKeyHead",
+                    name: "Gaming Mice, Keyboards and Headsets",
                     items: [
-                        { name: "Re-Arranged", href: "#" },
-                        { name: "Counterfeit", href: "#" },
-                        { name: "Full Nelson", href: "#" },
-                        { name: "My Way", href: "#" },
+                        { name: "Gaming Mice", href: "#" },
+                        { name: "Gaming Keyboards", href: "#" },
+                        { name: "Gaming Headsets", href: "#" },
                     ],
                 },
             ],
@@ -145,11 +134,42 @@ export default function Navbar() {
     const { props } = usePage();
     const { auth } = props;
 
+    useEffect(() => {
+        initializePaddle({
+            environment: "sandbox",
+            token: "test_cd1d6988724dfad9f64f84482f8",
+        })
+            .then((paddleInstance) => {
+                if (paddleInstance) {
+                    // Paddle.js is initialized
+                }
+            })
+            .catch((error) => {
+                console.error("Error initializing Paddle.js:", error);
+            });
+    }, []);
+
+    const openCheckout = () => {
+        if (window.Paddle) {
+            Paddle.Checkout.open({
+                items: [
+                    { price_id: "pri_01jk8wfe5s9tyg723q18x6qgk5", quantity: 5 },
+                    { price_id: "pri_01jk8wgscj135hs3nr6xyayaza", quantity: 1 },
+                ],
+                customer: {
+                    email: "sam@example.com",
+                    address: { country_code: "US", postal_code: "10021" },
+                },
+            });
+        } else {
+            console.error("Paddle is not loaded.");
+        }
+    };
+
     const handleSignOut = () => {
         // Example of how to sign out using Inertia.js
-        
-            Inertia.post(route("logout"));
-        
+
+        Inertia.post(route("logout"));
     };
     return (
         <>
@@ -430,6 +450,7 @@ export default function Navbar() {
                                         <div className="ml-4 flow-root lg:ml-6">
                                             <a
                                                 href="#"
+                                                onClick={openCheckout}
                                                 className="group -m-2 flex items-center p-2"
                                             >
                                                 <ShoppingBagIcon
